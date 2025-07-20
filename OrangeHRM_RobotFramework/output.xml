@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on darwin)" generated="2025-07-20T08:30:29.811709" rpa="false" schemaversion="5">
+<suite id="s1" name="Add New Employee Test" source="/Users/snigdhameharwal/PycharmProjects/OrangeHRM_RobotFramework/add_new_employee_test.robot">
+<test id="s1-t1" name="Verify a new employee is created" line="23">
+<kw name="launch application on chrome browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:29.898004" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-20T08:30:29.897882" elapsed="2.304918"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-20T08:30:32.203068" elapsed="0.322516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:35.527264" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:32.525723" elapsed="3.001944"/>
+</kw>
+<status status="PASS" start="2025-07-20T08:30:29.897506" elapsed="5.630459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:35.529284" level="INFO">Typing text 'admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:35.528435" elapsed="0.125095"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:35.653923" level="INFO">Typing text 'admin123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:35.653715" elapsed="0.036945"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:35.690944" level="INFO">Clicking button 'xpath=//button[text()=" Login "]'.</msg>
+<arg>xpath=//button[text()=" Login "]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:35.690817" elapsed="0.038607"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:38.730142" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:35.729556" elapsed="3.001169"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:38.732228" level="INFO">Clicking link 'css=a[href="/web/index.php/pim/viewPimModule"]'.</msg>
+<arg>css=a[href="/web/index.php/pim/viewPimModule"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:38.731463" elapsed="0.514096"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:40.247791" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:39.245753" elapsed="1.002517"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:40.249716" level="INFO">Clicking link 'xpath=//a[text()='Add Employee']'.</msg>
+<arg>xpath=//a[text()='Add Employee']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:40.249096" elapsed="0.311451"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:41.561641" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:40.560790" elapsed="1.000930"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.562042" level="INFO">Typing text 'TestUser_FirstName1' into text field 'xpath=//input[@placeholder='First Name']'.</msg>
+<arg>xpath=//input[@placeholder='First Name']</arg>
+<arg>${employee_firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.561874" elapsed="0.041028"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.603196" level="INFO">Typing text 'TestUser_LastName1' into text field 'xpath=//input[@name="lastName"]'.</msg>
+<arg>xpath=//input[@name="lastName"]</arg>
+<arg>${employee_lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.603045" elapsed="0.036873"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.651624" level="INFO">${EMPLOYEE_ID} = </msg>
+<var>${EMPLOYEE_ID}</var>
+<arg>xpath=(//input[@class="oxd-input oxd-input--active"])[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.640078" elapsed="0.011576"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-20T08:30:41.651913" level="INFO">Newly created employee id is </msg>
+<arg>Newly created employee id is ${EMPLOYEE_ID}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.651797" elapsed="0.000138"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.652117" level="INFO">Clicking element 'xpath=//span[@class="oxd-switch-input oxd-switch-input--active --label-right"]'.</msg>
+<arg>xpath=//span[@class="oxd-switch-input oxd-switch-input--active --label-right"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.652010" elapsed="0.030215"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.682687" level="INFO">Typing text 'TestUser_UserName4' into text field 'xpath=(//input[@class="oxd-input oxd-input--active"])[3]'.</msg>
+<arg>xpath=(//input[@class="oxd-input oxd-input--active"])[3]</arg>
+<arg>${employee_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.682450" elapsed="0.036976"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.719764" level="INFO">Typing text 'Password123' into text field 'xpath=(//input[@type="password"])[1]'.</msg>
+<arg>xpath=(//input[@type="password"])[1]</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.719571" elapsed="0.038588"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:41.758451" level="INFO">Typing text 'Password123' into text field 'xpath=(//input[@type="password"])[2]'.</msg>
+<arg>xpath=(//input[@type="password"])[2]</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.758295" elapsed="0.036719"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:42.797962" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:41.795204" elapsed="1.003237"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:42.799595" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:42.799076" elapsed="0.070152"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:44.870657" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:42.869385" elapsed="2.001744"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:44.872715" level="INFO">Clicking link 'xpath=//a[text()='Employee List']'.</msg>
+<arg>xpath=//a[text()='Employee List']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:44.871859" elapsed="0.297001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-20T08:30:47.170787" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-20T08:30:45.169064" elapsed="2.002205"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:47.172756" level="INFO">Typing text '' into text field 'xpath=(//input[@class="oxd-input oxd-input--active"])[2]'.</msg>
+<arg>xpath=(//input[@class="oxd-input oxd-input--active"])[2]</arg>
+<arg>${employee_id}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:47.172022" elapsed="0.059907"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:47.232285" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-20T08:30:47.232124" elapsed="0.038716"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-07-20T08:30:47.445895" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-07-20T08:30:47.446009" level="FAIL">Page should have contained text '(1) Record Found' but did not.</msg>
+<arg>(1) Record Found</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-07-20T08:30:47.270996" elapsed="0.177064">Page should have contained text '(1) Record Found' but did not.</status>
+</kw>
+<doc>creating a new employee and verifying that employee is created</doc>
+<status status="FAIL" start="2025-07-20T08:30:29.897101" elapsed="17.551117">Page should have contained text '(1) Record Found' but did not.</status>
+</test>
+<status status="FAIL" start="2025-07-20T08:30:29.812302" elapsed="17.636162"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Add New Employee Test" id="s1" pass="0" fail="1" skip="0">Add New Employee Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
